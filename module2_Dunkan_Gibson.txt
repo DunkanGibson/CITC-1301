@@ -1,0 +1,25 @@
+//This program takes in users name, degree, number of credits they have, and number of credits to graduate
+//It then calculates the number of credits left that are required to graduate
+
+//Declare variables
+Declare String degree
+Declare Integer numOfCredits
+Declare Integer numOfCreditsToGraduate
+Declare String name
+Declare Integer numOfCreditsLeftBeforeGrad
+
+//Gets the users inputs
+Display "What is your name?"
+Input name
+Display "What is your degree"
+Input degree
+Display "How many credits have you taken so far?"
+Input numOfCredits
+Display "How many credits required to earn the degree?"
+Input numOfCreditsToGraduate
+
+//This does the calculations
+Set numOfCreditsLeftBeforeGrad = numOfCreditsToGraduate - numOfCredits
+
+//Displays the results of the calculations
+Display name, ", ", degree, ", ", "Credits left to graduate are: ", numOfCreditsLeftBeforeGrad
