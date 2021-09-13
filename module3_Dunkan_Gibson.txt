@@ -1,0 +1,24 @@
+
+Module main()
+	// Declare variables for the parameters needed for caluclations
+	Declare Integer first
+	Declare Integer second
+	
+	// Display a prompt to ask for values and get the values into the variables
+	Display "Please enter two values: "
+	Input first
+	Input second
+	
+	// Call showCalculations to do the caluclations and display them
+	Call showCalculations(first, second)
+	
+End Module
+
+Module showCalculations(Integer x, Integer y)
+	//Calculations done and displayed via this module
+	Display  x + " + " + y + " = " + (x + y) 
+	Display  x + " - " + y + " = " + (x - y) 
+	Display  x + " * " + y + " = " + (x * y)
+	Display  x + " / " + y + " = " + (x / y) 
+
+End Module
