@@ -24,9 +24,9 @@ Module quantityDiscount(Integer numOfPackages)
 		Set discountPercent = 0
 	Else If numOfPackages <= 19 Then
 		Set discountPercent = 0.2 
-	Else If w <= 49 Then
+	Else If numOfPackages <= 49 Then
 		Set discountPercent = 0.3
-	Else If
+	Else If numOfPackages <= 99
 		Set discountPercent = 0.4 
 	Else
 		Set discountPercent = 0.5	
