@@ -1,0 +1,38 @@
+//This program calculates and displays
+//the discount applies to total based on number of packages.
+Module main()
+	//Create a local variable
+	Declare Integer numOfPackages
+	
+	//Get user input
+	Display "Please enter the number of packages purchased."
+	Input numOfPackages
+	
+	//Calling of a module to do the calculations
+	Call quantityDiscount(numOfPackages)
+	
+End Module
+
+/This module calculates and shows the
+//discount and the total after the discount using the numOfPackages as its parameter.
+Module quantityDiscount(Integer numOfPackages)
+	//Create a local variable
+	Declare Real discountPercent
+	
+	//Calculate the discount 
+	If numOfPackages < 10 Then
+		Set discountPercent = 0
+	Else If numOfPackages <= 19 Then
+		Set discountPercent = 0.2 
+	Else If w <= 49 Then
+		Set discountPercent = 0.3
+	Else If
+		Set discountPercent = 0.4 
+	Else
+		Set discountPercent = 0.5	
+	End If
+	
+	//Display calculations results
+	Display "Your discount is ", ((99 * numOfPackages) * discountPercent)
+	Display "Your total after the discount is ", ((99 * numOfPackages) * (1 - discountPercent))
+End Module

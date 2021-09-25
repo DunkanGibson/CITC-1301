@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dunka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-25 12:20:23 PM"/>
+        <attribute name="created" value="ZHVua2E7R0lBOzIwMjEtMDktMjU7MTA6MzM6MDMgQU07MjAwMA=="/>
+        <attribute name="edited" value="ZHVua2E7R0lBOzIwMjEtMDktMjU7MTI6MjA6MjMgUE07MTM7MjE3NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numOfPackages" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the number of packages purchased.&quot;" newline="True"/>
+            <input variable="numOfPackages"/>
+            <call expression="quantityDiscount(numOfPackages)"/>
+        </body>
+    </function>
+    <function name="quantityDiscount" type="None" variable="">
+        <parameters>
+            <parameter name="numOfPackages" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="discountPercent" type="Real" array="False" size=""/>
+            <if expression="numOfPackages &lt; 10">
+                <then>
+                    <assign variable="discountPercent" expression="0"/>
+                </then>
+                <else>
+                    <if expression="numOfPackages &lt;= 19">
+                        <then>
+                            <assign variable="discountPercent" expression="0.2"/>
+                        </then>
+                        <else>
+                            <if expression="numOfPackages &lt;= 49">
+                                <then>
+                                    <assign variable="discountPercent" expression="0.3"/>
+                                </then>
+                                <else>
+                                    <if expression="numOfPackages &lt;= 99">
+                                        <then>
+                                            <assign variable="discountPercent" expression="0.4"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="discountPercent" expression="0.5"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Your discount is &quot; &amp; ((99 * numOfPackages) * discountPercent)" newline="True"/>
+            <output expression="&quot;Your total after the discount is &quot; &amp; ((99 * numOfPackages) * (1 - discountPercent))" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
