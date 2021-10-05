@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dunka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-04 08:43:13 PM"/>
+        <attribute name="created" value="ZHVua2E7R0lBOzIwMjEtMTAtMDQ7MDg6Mjg6MTggUE07MjAyMQ=="/>
+        <attribute name="edited" value="ZHVua2E7R0lBOzIwMjEtMTAtMDQ7MDg6NDM6MTMgUE07NTsyMTI1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="10" end="50" direction="inc" step="5">
+                <call expression="caloriesBurned(i)"/>
+            </for>
+        </body>
+    </function>
+    <function name="CaloriesBurned" type="None" variable="">
+        <parameters>
+            <parameter name="timeRunning" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="burned" type="Real" array="False" size=""/>
+            <assign variable="burned" expression="timeRunning * 3.9"/>
+            <output expression="&quot;Calories burned after &quot; &amp; timeRunning &amp; &quot; minutes is &quot; &amp; burned" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

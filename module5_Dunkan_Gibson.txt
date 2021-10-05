@@ -1,0 +1,22 @@
+Module main()
+	//Create a local variable for counting
+	Declare Integer i
+	
+	//Loop that calls the caloriesBurned module to show the number of caloriesburned after 10, 15, 20, 25, 30, 35, 40, 45, and 50 minutes
+	For i = 10 to 50 Step 5
+		Call caloriesBurned(i)
+	End For
+End Module
+
+/This module calculates and shows the amount of calories burned based on the number of minutes input.
+Module caloriesBurned(Integer timeRunning)
+	//Create a local variable
+	Declare Real burned
+	
+	//Calculate the number of calories burned
+	burned = timeRunning * 3.9
+	
+	//Display calculations results
+	Display "Calories burned after ", timeRunning, " minutes is ", burned)
+	
+End Module
