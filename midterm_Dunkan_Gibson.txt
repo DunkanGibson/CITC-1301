@@ -1,0 +1,22 @@
+
+Midterm Part 2A
+Line 2 num variable does not have a data type decalred with it.
+	Declare Integer num
+	
+Line 4 uses Output instead of Display
+	Display "Enter a number."
+	
+Line 7 has a semicolon after it this is not used in pseudocode
+	Call hitOrMiss(num)
+	
+Line 8 states end Main when it should be End Module
+	End Module
+	
+Line 10 The module header does not have a data type specified with the parameter variable
+	Module hitOrMiss(Integer n)
+	
+Line 14 is missing the Then clause
+	If n = secretNum Then
+	
+Line 18 there is no End If clause to terminante the if statement	
+	End If
