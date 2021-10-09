@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dunka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-09 06:18:59 PM"/>
+        <attribute name="created" value="ZHVua2E7R0lBOzIwMjEtMTAtMDk7MDY6MDY6MDQgUE07MjAxNQ=="/>
+        <attribute name="edited" value="ZHVua2E7R0lBOzIwMjEtMTAtMDk7MDY6MTg6NTkgUE07NDsyMTM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="continue" type="String" array="False" size=""/>
+            <assign variable="continue" expression="&quot;y&quot;"/>
+            <declare name="first" type="Integer" array="False" size=""/>
+            <declare name="second" type="Integer" array="False" size=""/>
+            <while expression="continue == &quot;y&quot;">
+                <output expression="&quot;Please enter two values&quot;" newline="True"/>
+                <input variable="first"/>
+                <input variable="second"/>
+                <call expression="showArea(first, second)"/>
+                <call expression="showDifference(first, second)"/>
+                <output expression="&quot;Do you want to continue? (Enter y for yes)&quot;" newline="True"/>
+                <input variable="continue"/>
+            </while>
+        </body>
+    </function>
+    <function name="showArea" type="None" variable="">
+        <parameters>
+            <parameter name="length" type="Integer" array="False"/>
+            <parameter name="width" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="perimeter" type="Integer" array="False" size=""/>
+            <assign variable="perimeter" expression="2 * (length + width)"/>
+            <output expression="&quot;The perimeter is &quot; &amp; perimeter" newline="True"/>
+        </body>
+    </function>
+    <function name="showDifference" type="None" variable="">
+        <parameters>
+            <parameter name="first" type="Integer" array="False"/>
+            <parameter name="second" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="diff" type="Integer" array="False" size=""/>
+            <if expression="first &gt; second">
+                <then>
+                    <assign variable="diff" expression="first - second"/>
+                </then>
+                <else>
+                    <assign variable="diff" expression="second - first"/>
+                </else>
+            </if>
+            <output expression="&quot;The difference is &quot; &amp; diff" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

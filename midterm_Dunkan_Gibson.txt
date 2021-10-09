@@ -1,5 +1,6 @@
 
 Midterm Part 2A
+
 Line 2 num variable does not have a data type decalred with it.
 	Declare Integer num
 	
@@ -20,3 +21,62 @@ Line 14 is missing the Then clause
 	
 Line 18 there is no End If clause to terminante the if statement	
 	End If
+	
+
+Midterm Part 2B
+
+Module main ()
+
+	//Create a local variable
+	Declare String continue = "y"
+	Declare Integer first
+	Declare Integer second
+	
+	//While loop to prompt the user to enter two numbers, pass the numbers to modules showArea and showDifference, 
+	//and ask the user to continue or stop; if continue, go back to the loop, if stop, get out of the loop
+	While continue == "y"
+		
+		Display "Please enter two values"
+		Input first
+		Input second
+		
+		Call showArea(first, second)
+		Call showDifference(first, second)
+		
+		Display "Do you want to continue? (Enter y for yes)"
+		Input continue
+		
+	End While
+
+End Module
+
+//This module calculates and displays the perimeter of the rectangle defined by the two input parameters
+Module showArea(Integer length, Integer width)
+
+	//Create a local variable
+	Declare Integer perimeter
+	
+	//Calculates the perimeter of the rectangle 
+	Set perimeter = 2(length + width)
+	
+	//Display calculations results
+	Display "The perimeter is ", perimeter
+
+End Module
+
+//This module finds out the difference between the two inputs and displays it.
+Module showDifference(Integer first, Integer second)
+
+	//Create a local variable
+	Declare Integer diff
+	
+	//If statment to find out which input is larger, then subtract smaller one from the larger one to get thedifference
+	If first > second Then
+		Set diff = (first - second) 
+	Else
+		Set diff = (second - first)
+	End If
+
+	//Display calculations results
+	Display "The difference is ", diff
+End Module

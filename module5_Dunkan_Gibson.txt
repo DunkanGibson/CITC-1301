@@ -17,6 +17,6 @@ Module caloriesBurned(Integer timeRunning)
 	burned = timeRunning * 3.9
 	
 	//Display calculations results
-	Display "Calories burned after ", timeRunning, " minutes is ", burned)
+	Display "Calories burned after ", timeRunning, " minutes is ", burned
 	
 End Module
