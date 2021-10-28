@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dunka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-27 08:12:49 PM"/>
+        <attribute name="created" value="ZHVua2E7R0lBOzIwMjEtMTAtMjc7MDc6MzQ6MTkgUE07MjAyMw=="/>
+        <attribute name="edited" value="ZHVua2E7R0lBOzIwMjEtMTAtMjc7MDg6MTI6NDkgUE07MTM7MjE4Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="firstNumber" type="Integer" array="False" size=""/>
+            <declare name="secondNumber" type="Integer" array="False" size=""/>
+            <declare name="average" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the first number&quot;" newline="True"/>
+            <input variable="firstNumber"/>
+            <output expression="&quot;Please enter the second number&quot;" newline="True"/>
+            <input variable="secondNumber"/>
+            <assign variable="average" expression="totalSum(firstNumber, secondNumber) / totalNumbers(firstNumber, secondNumber)"/>
+            <output expression="&quot;The average of all the integers between &quot; &amp; firstNumber &amp; &quot; and &quot; &amp; secondNumber &amp; &quot; is &quot; &amp; average" newline="True"/>
+        </body>
+    </function>
+    <function name="totalNumbers" type="Integer" variable="numberOfNumbers">
+        <parameters>
+            <parameter name="first" type="Integer" array="False"/>
+            <parameter name="second" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="numberOfNumbers" type="Integer" array="False" size=""/>
+            <assign variable="numberOfNumbers" expression="0"/>
+            <declare name="biggerNum" type="Integer" array="False" size=""/>
+            <declare name="smallerNum" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <if expression="first &gt; second">
+                <then>
+                    <assign variable="biggerNum" expression="first"/>
+                    <assign variable="smallerNum" expression="second"/>
+                </then>
+                <else>
+                    <assign variable="biggerNum" expression="second"/>
+                    <assign variable="smallerNum" expression="first"/>
+                </else>
+            </if>
+            <for variable="i" start="smallerNum" end="biggerNum" direction="inc" step="1">
+                <assign variable="numberOfNumbers" expression="numberOfNumbers + 1"/>
+            </for>
+        </body>
+    </function>
+    <function name="totalSum" type="Integer" variable="sum">
+        <parameters>
+            <parameter name="first" type="Integer" array="False"/>
+            <parameter name="second" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <declare name="biggerNum" type="Integer" array="False" size=""/>
+            <declare name="smallerNum" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <if expression="first &gt; second">
+                <then>
+                    <assign variable="biggerNum" expression="first"/>
+                    <assign variable="smallerNum" expression="second"/>
+                </then>
+                <else>
+                    <assign variable="biggerNum" expression="second"/>
+                    <assign variable="smallerNum" expression="first"/>
+                </else>
+            </if>
+            <for variable="i" start="smallerNum" end="biggerNum" direction="inc" step="1">
+                <assign variable="sum" expression="sum + i"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
