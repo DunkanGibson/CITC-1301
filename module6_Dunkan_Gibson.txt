@@ -1,0 +1,82 @@
+Module main()
+	//Create a local variable for counting
+	Declare Integer firstNumber
+	Declare Integer secondNumber
+	Declare Integer average
+	
+	
+	//Get user input
+	Display "Please enter the first number."
+	Input firstNumber
+	
+	Display "Please enter the second number."
+	Input secondNumber
+	
+	//Call the functions and set to variable
+	Set average = (totalSum(firstNumber, secondNumber) / totalNumbers(firstNumber, secondNumber))
+	
+	//Display calculations results
+	Display "The average of all the integers between ", firstNumber, " and ", secondNumber, " is ", average
+	
+
+	
+End Module
+
+
+//This module finds out which input parameter is larger and finds the total number of integers between the two input parameters
+Module totalNumbers(Integer first,  Integer second)
+
+	//Create a local variable
+	Declare Integer numberOfNumbers
+	Declare Integer biggerNum
+	Declare Integer smallerNum
+	Declare Integer i
+	
+	//Determine which number is bigger
+	If first > second Then
+		Set biggerNum = first
+		Set smallerNum = second
+	Else
+		Set biggerNum = second
+		Set smallerNum = first
+	End If
+	
+	
+	//Loop that finds the total number of integers between the two input parameters
+	For i = smallerNumNum to biggerNum Step 1
+		numberOfNumbers++
+	End For
+	
+	//Return results of the function
+	Return numberOfNumbers
+	
+End Module
+
+//This module finds out which input parameter is larger and finds the sum of all the integers between the two input parameters and returns it.
+Module totalSum(Integer first, Integer second)
+
+	//Create a local variable
+	Declare Integer sum
+	Declare Integer biggerNum
+	Declare Integer smallerNum
+	Declare Integer i
+	Declare sum = 0
+	
+	//Determine which number is bigger
+	If first > second Then
+		Set biggerNum = first
+		Set smallerNum = second
+	Else
+		Set biggerNum = second
+		Set smallerNum = first
+	End If
+	
+	//Loop that finds the sum of all the integers between the two input parameters and returns it.
+	For i = smallerNumNum to biggerNum Step 1
+		sum = sum + i
+	End For
+	
+	//Return results of the function
+	Return sum
+	
+End Module
