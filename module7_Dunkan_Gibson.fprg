@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dunka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-04 08:52:45 PM"/>
+        <attribute name="created" value="ZHVua2E7R0lBOzIwMjEtMTEtMDQ7MDg6MjE6MjUgUE07MjAxMw=="/>
+        <attribute name="edited" value="ZHVua2E7R0lBOzIwMjEtMTEtMDQ7MDg6NTI6NDUgUE07ODsyMTM0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="payRate" type="Real" array="False" size=""/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter your pay rate.&quot;" newline="True"/>
+            <input variable="payRate"/>
+            <while expression="payRate &lt; 7.50 || payRate &gt; 18.25">
+                <output expression="&quot;Please enter a valid pay rate($7.50 - $18.25).&quot;" newline="True"/>
+                <input variable="payRate"/>
+            </while>
+            <output expression="&quot;Please enter the hours you have worked.&quot;" newline="True"/>
+            <input variable="hours"/>
+            <while expression="hours &lt; 0 || hours &gt; 40">
+                <output expression="&quot;Please enter a valid number of hours worked(0 - 40).&quot;" newline="True"/>
+                <input variable="hours"/>
+            </while>
+            <output expression="&quot;The gross pay is &quot; &amp; grossPay(payRate, hours)" newline="True"/>
+        </body>
+    </function>
+    <function name="grossPay" type="Real" variable="grossPay">
+        <parameters>
+            <parameter name="payRate" type="Real" array="False"/>
+            <parameter name="hours" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="grossPay" type="Real" array="False" size=""/>
+            <assign variable="grossPay" expression="payRate * hours"/>
+        </body>
+    </function>
+</flowgorithm>
