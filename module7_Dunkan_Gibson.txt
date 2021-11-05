@@ -1,0 +1,49 @@
+Module main()
+
+//Create a local variables for counting
+		Declare Real payRate
+		Declare Integer hours
+		Declare Real grossPay
+	
+	
+//Get user input
+		Display "Please enter your pay rate."
+		Input payRate
+	
+//Validate user input
+		While payRate < 7.50 OR payRate > 18.25 
+			Display "Please enter a valid pay rate($7.50 - $18.25)"
+			Input payRate
+		End While
+	
+//Get user input
+	Display "Please enter the number of hours worked"
+		Input hours
+		
+//Validate user input
+		While hours < 0 OR hours > 40 
+			Display "Please enter a valid number of hours worked(0 - 40)"
+			Input hours
+		End While	
+	
+	
+//Call the functions and set to variable
+	Set grossPay = grossPay(payRate, hours)
+	
+//Display calculations results
+	Display "The gross pay is ", grossPay
+	
+	
+End Module
+
+
+//Function to calcualte the gross pay and return it as a real
+Function Real grossPay(Real payRate, Integer hours)
+
+	Declare grossPay
+	
+	Set grossPay = (payRate * hours)
+	
+	Return grossPay
+	
+End Function
