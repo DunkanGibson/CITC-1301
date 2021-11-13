@@ -1,0 +1,43 @@
+
+//Create a constant used as array size
+Constant Integer SIZE = 25
+
+//Create an integer array with 20 elements
+Declare Integer intArray[SIZE]
+
+//Create local variables
+Declare Integer i
+Declare Integer j
+Declare Integer k
+Declare Integer l
+Declare Integer m
+Declare Integer sum
+
+//Fill the array with random numbers
+While i < SIZE
+Set n = random(0, SIZE)
+i = i + 1
+End While
+
+//Display the elements in the array
+While j < SIZE
+Display intArray[j]
+End While
+
+//Multiply the elements in the array by 2
+While k < SIZE
+intArray[k] = intArray[k] * 2
+End While
+
+//Display the elements in the array
+While l < SIZE
+Display intArray[l]
+End While
+
+//Calculate the sum of all the elements in the array
+While m < SIZE
+sum = intArray[m] + sum
+End While
+
+//Display the results
+Display "The sum of the elements in the array is ", sum
