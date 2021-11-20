@@ -1,0 +1,142 @@
+Module main()
+
+		//Create a constant used as array size
+		Constant Integer SIZE = 50
+
+		//Create an integer array with 50 elements
+		Declare Integer intArray[SIZE]
+
+		//Create local variables
+		Declare randomNumber
+
+		//Fill the array with random numbers
+		fillArray(intArray)
+
+		//Display the elements in the array
+		displayArray(intArray)
+		
+		//Sort the array using the
+		bubbleSort(intArray, SIZE)
+		
+		//Display the elements in the array
+		displayArray(intArray)
+		
+		// Create a random number 
+		Set randomNumber = random(0, 1000)
+		
+		
+		//Used the binary search function to search the number and display whether or not the number is in the array
+		If binarySearch(intArray, randomNumber, SIZE) >= 0 Then
+			Display "Number found in the array"
+		Else
+			Display "Number not found"
+		End If
+		
+		
+
+
+End Module
+
+
+
+
+
+Module fillArray(Integer intArray[], Integer arraySize)
+
+		Declare Integer counter
+
+		Set counter = arraySize
+
+		While (counter >= 0 ) AND (counter <= arraySize)
+			Set counter = counter - 1
+			Set intArray[counter] = random(0,1000)
+		End While
+		
+End Module
+
+
+
+
+Module displayArray (Integer intArray[], Integer arraySize)
+
+		Declare Integer i
+
+			For i = 0 To arraySize - 1
+				Display "Element ", i, " is ", intArray[i]
+			End For
+		
+End Module
+
+
+
+Module bubbleSort(Integer Ref array[], Integer arraySize)
+
+
+	Declare Integer maxElement
+
+	Declare Integer index
+
+	 For maxElement = arraySize − 1 To 0 Step − 1
+
+		For index = 0 To maxElement − 1
+
+			If array[index] > array[index + 1] Then
+			Call swap(array[index], array[index + 1])
+			End If
+		End For
+	 End For
+	 
+End Module
+
+
+
+Module swap(Integer Ref a, Integer Ref b)
+
+	Declare Integer temp
+
+	Set temp = a
+	Set a = b
+	Set b = temp
+End Module
+
+
+Function Integer binarySearch(Integer array[], Integer value, Integer arraySize)
+	 
+	 Declare Integer first = 0
+
+	
+	 Declare Integer last = arraySize − 1
+
+	
+	 Declare Integer position = − 1
+
+	
+	 Declare Boolean found = False
+
+	 
+	 Declare Integer middle
+
+	 While (NOT found) AND (first <= last)
+	 
+	 Set middle = (first + last) / 2
+
+	 
+	 If array[middle] == value Then
+	 Set found = True
+	 Set position = middle
+
+	
+	 Else If array[middle] > value Then
+	 Set last = middle − 1
+
+	 
+	 Else
+	 Set first = middle + 1
+	 End If
+	 End While
+
+	 // Return the position of the item, or − 1
+	 // if the item was not found.
+	 Return position
+	 
+End Function
