@@ -1,0 +1,69 @@
+Module main()
+	//Create variables
+	Declare String petName
+	Declare String petType
+	Declare Integer petAge
+	
+	//Declare a Pet object
+	Declare Pet myPet
+	
+	//Get user input
+	Display "What is the name of your pet?"
+	Input petName
+	
+	Display "What type of pet do you have?"
+	Input petType
+	
+	Display "How old is you pet?"
+	Input petAge
+	
+	//Create a Car object
+	Set myPet = New Pet(petName, petType, petAge)
+	
+	//Call Getter Methods for Pet and show results
+	Display "The name of your pet is ", myPet.getName()
+	Display "The type of your pet is ", myPet.getType()
+	Display "The age of your pet is ", myPet.getAge()
+
+End Module
+
+Class Pet
+	//Field declarations
+	Private String name
+	Private String type
+	Private Integer age
+	
+	//Constructor
+	Public Module Pet(String petName, String petType, Integer petAge)
+		Set name = petName
+		Set type = petType
+		Set age = petAge
+	End Module
+	
+	//Getter methods
+	Public Function String getName()
+		Return name
+	End Function
+	
+	Public Function String getType()
+		Return type
+	End Function
+	
+	Public Function Integer getAge()
+		Return age
+	End Function
+	
+	//Setter methods
+	Public Module setName(String petName)
+	Set name = petName
+	End Module
+	
+	Public Module setName(String petType)
+	Set type = petType
+	End Module
+	
+	Public Module setName(Integer petAge)
+	Set age = petAge
+	End Module
+	
+End Class	

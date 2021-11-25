@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dunka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-25 10:45:45 AM"/>
+        <attribute name="created" value="ZHVua2E7R0lBOzIwMjEtMTEtMjU7MTA6NDU6MDYgQU07MTk5OQ=="/>
+        <attribute name="edited" value="ZHVua2E7R0lBOzIwMjEtMTEtMjU7MTA6NDU6NDUgQU07MTsyMTEw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+</flowgorithm>
