@@ -1,0 +1,73 @@
+Debugging Questions:
+Line 3: Declare Real avg
+Line 25: Module Integer maxNum(Integer a, Integer b, Integer c)
+Line 40: Module Real avgNum(Integer a, Integer b, Integer c)
+
+Programming Question:
+
+Module main()
+
+		//Delcare variables to be used
+		Declare Integer i
+		Declare Integer j
+		Declare Integer k
+		Declare Integer sum
+		Declare Integer max
+		Declare Integer min
+		
+		
+		
+		//Create a constant used as array size
+		Constant Integer SIZE = 50
+
+		//Create an integer array with 50 elements
+		Declare Integer intArray[SIZE]
+
+		//Fill the array with random numbers
+		fillArray(intArray, SIZE)
+		
+		//Find the largest element in the array
+		Set max to -1
+		For i = 0 To arraySize - 1
+			IF intArray[i] > max THEN
+				max = intArray[i]
+			ENDIF
+		END FOR
+		
+		
+		//Find the smallest element in the array
+		Set min to 101
+		For j = 0 To arraySize - 1
+			IF intArray[j] < min THEN
+				min = intArray[j]
+			ENDIF
+		END FOR
+		
+		//Calculate the sum of all the elements in the array
+		Set k = 0
+		While k < SIZE
+		sum = intArray[k] + sum
+		End While
+		
+		//Display the results
+		Display max
+		Display min
+		Display sum
+		
+
+End Module
+
+
+
+Module fillArray(Integer intArray[], Integer arraySize)
+
+		Declare Integer counter
+
+		Set counter = arraySize
+
+		While (counter >= 0 ) AND (counter <= arraySize)
+			Set counter = counter - 1
+			Set intArray[counter] = random(0,100)
+		End While
+		
+End Module

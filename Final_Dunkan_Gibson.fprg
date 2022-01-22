@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dunka"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-05 08:34:34 PM"/>
+        <attribute name="created" value="ZHVua2E7R0lBOzIwMjEtMTItMDU7MDg6MTU6MzEgUE07MjAxNQ=="/>
+        <attribute name="edited" value="ZHVua2E7R0lBOzIwMjEtMTItMDU7MDg6MTc6MzIgUE07MztkdW5rYTtHSUE7MjAyMS0xMS0yMDswMzozMjo1MCBQTTttb2R1bGU5X0R1bmthbl9HaWJzb24uZnByZzs2ODQx"/>
+        <attribute name="edited" value="ZHVua2E7R0lBOzIwMjEtMTItMDU7MDg6MTg6NTAgUE07MTtkdW5rYTtHSUE7MjAyMS0xMS0xMjswNzo1NzoxNiBQTTttb2R1bGU4X0R1bmthbl9HaWJzb24uZnByZzs2ODUz"/>
+        <attribute name="edited" value="ZHVua2E7R0lBOzIwMjEtMTItMDU7MDg6MzQ6MzQgUE07MzsyMTI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="SIZE" type="Integer" array="False" size=""/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <declare name="min" type="Integer" array="False" size=""/>
+            <declare name="max" type="Integer" array="False" size=""/>
+            <assign variable="SIZE" expression="50"/>
+            <declare name="intArray" type="Integer" array="True" size="SIZE"/>
+            <call expression="fillArray(intArray)"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="sum" expression="0"/>
+            <while expression="i &lt; SIZE -1">
+                <assign variable="sum" expression="sum + intArray[i]"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <assign variable="max" expression="-1"/>
+            <for variable="j" start="0" end="SIZE -1" direction="inc" step="1">
+                <if expression="intArray[j] &gt; max">
+                    <then>
+                        <assign variable="max" expression="intArray[j]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="min" expression="0"/>
+            <for variable="k" start="0" end="SIZE - 1" direction="inc" step="1">
+                <if expression="intArray[k] &lt; min">
+                    <then>
+                        <assign variable="min" expression="intArray[k]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;The largest number is &quot; &amp; max" newline="True"/>
+            <output expression="&quot;The smallest number is &quot; &amp; min" newline="True"/>
+            <output expression="&quot;The sum of the numbers is &quot; &amp; sum" newline="True"/>
+        </body>
+    </function>
+    <function name="fillArray" type="None" variable="">
+        <parameters>
+            <parameter name="intArray" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="size(intArray) - 1" direction="inc" step="1">
+                <assign variable="intArray[i]" expression="random(100)"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
